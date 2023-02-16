@@ -1,10 +1,12 @@
 package coursework1;
 
 public class Employee {
-    String fullName;
-    int department;
+    private final String fullName;
+    private int department;
     int salary;
     public static int count = 0;
+    Employee[] employee = new Employee[getSalary()];
+
 
     public Employee(String fullName,  int department, int salary) {
         this.fullName= fullName;
@@ -14,15 +16,15 @@ public class Employee {
     }
 
     public String getFullName() {
-        return this.fullName;
+        return fullName;
     }
 
     public int getDepartment() {
-        return  this.department;
+        return  department;
     }
 
     public int getSalary() {
-        return this.salary;
+        return salary;
     }
 
     public void setDepartment(int department) {
@@ -38,11 +40,24 @@ public class Employee {
     }
 
 
+    public int sumSalary(int salary) {
+        for (int i = 0; i < employee.length; i++) {
+            this.salary = employee1.salary + salary;
+            System.out.println(salary);
+            return this.salary;
+
+
+        }
+        return salary;
+    }
+}
+
+
 
 
     // public static id () {
       //this.id = id;
     //count++;
     //}
-}
+
 
